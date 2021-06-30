@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: User Manager
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/usermanager
+    username: ighormaia
+    password: password
+    initialization-mode: always
+
+  jpa:
+    show_sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+
+server:
+  port: 9000
