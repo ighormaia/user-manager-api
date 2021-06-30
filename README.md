@@ -29,6 +29,7 @@ Configuração do Postgres: (pode ser alterado no arquivo "application-prod.yml"
  - database: usermanager
  - username: postgres
  - password: password
+ - port: 5432
 
 
 Após a execução a api estará disponível na url:
