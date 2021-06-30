@@ -9,8 +9,8 @@ Requisitos:
  - Postgres 12.7 ou superior (caso escolha o perfil Prod)
 
 O projeto está configurado com dois Profiles, podendo ser trocado ao rodar a aplicação
- - Dev (configurado com o banco H2)
- - Prod (configurado para acessar um banco postgres)
+ - Dev | configurado com o banco H2 (por padrão é o perfil usado)
+ - Prod | configurado para acessar um banco postgres
 
 
 Comandos para rodar a aplicação:
