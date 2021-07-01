@@ -1,6 +1,7 @@
 package test.usermanager.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -12,5 +13,7 @@ public interface CargoRepository extends JpaRepository<Cargo, Long> {
 
     // o nome do método indica para o framework a ordenação por nome crescente
     List<Cargo> findAllByOrderByNomeAsc();
+
+    Optional<Cargo> findByNome(String nome);
 
 }

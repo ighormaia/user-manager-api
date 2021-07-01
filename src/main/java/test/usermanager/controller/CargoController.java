@@ -34,12 +34,12 @@ public class CargoController {
     }
 
     @PostMapping("/cargos")
-    public Cargo criarCargo(@Valid @RequestBody Cargo cargo) {
+    public Cargo criarCargo(@Valid @RequestBody Cargo cargo) throws Exception {
         return cargoService.save(cargo);
     }
 
     @PutMapping("/cargos")
-    public Cargo atualizarCargo(@Valid @RequestBody Cargo cargo) {
+    public Cargo atualizarCargo(@Valid @RequestBody Cargo cargo) throws Exception {
         return cargoService.update(cargo);
     }
 

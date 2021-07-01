@@ -1,6 +1,7 @@
 package test.usermanager.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -20,11 +21,23 @@ public class PerfilService {
         return perfilRepository.findAllByOrderByNomeAsc();
     }
 
-    public Perfil save(Perfil perfil) {
+    public Perfil save(Perfil perfil) throws Exception {
+        Optional<Perfil> perfilJaExiste = perfilRepository.findByNome(perfil.getNome());
+
+        if (perfilJaExiste.isPresent()) {
+            throw new Exception("Este perfil já está cadastrado");
+        }
+
         return perfilRepository.save(perfil);
     }
 
-    public Perfil update(Perfil perfil) {
+    public Perfil update(Perfil perfil) throws Exception {
+        Optional<Perfil> perfilJaExiste = perfilRepository.findByNome(perfil.getNome());
+
+        if (perfilJaExiste.isPresent()) {
+            throw new Exception("Este perfil já está cadastrado");
+        }
+
         return perfilRepository.save(perfil);
     }
 

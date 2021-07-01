@@ -1,6 +1,7 @@
 package test.usermanager.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -20,11 +21,23 @@ public class CargoService {
         return cargoRepository.findAllByOrderByNomeAsc();
     }
 
-    public Cargo save(Cargo cargo) {
+    public Cargo save(Cargo cargo) throws Exception {
+        Optional<Cargo> cargoJaExiste = cargoRepository.findByNome(cargo.getNome());
+
+        if (cargoJaExiste.isPresent()) {
+            throw new Exception("Este cargo já está cadastrado");
+        }
+
         return cargoRepository.save(cargo);
     }
 
-    public Cargo update(Cargo cargo) {
+    public Cargo update(Cargo cargo) throws Exception {
+        Optional<Cargo> cargoJaExiste = cargoRepository.findByNome(cargo.getNome());
+
+        if (cargoJaExiste.isPresent()) {
+            throw new Exception("Este cargo já está cadastrado");
+        }
+
         return cargoRepository.save(cargo);
     }
 

@@ -34,12 +34,12 @@ public class PerfilController {
     }
 
     @PostMapping("/perfis")
-    public Perfil criarPerfil(@Valid @RequestBody Perfil perfil) {
+    public Perfil criarPerfil(@Valid @RequestBody Perfil perfil) throws Exception {
         return perfilService.save(perfil);
     }
 
     @PutMapping("/perfis")
-    public Perfil atualizarPerfil(@Valid @RequestBody Perfil perfil) {
+    public Perfil atualizarPerfil(@Valid @RequestBody Perfil perfil) throws Exception {
         return perfilService.update(perfil);
     }
 

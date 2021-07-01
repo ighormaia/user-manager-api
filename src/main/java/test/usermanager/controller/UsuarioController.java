@@ -34,12 +34,12 @@ public class UsuarioController {
     }
 
     @PostMapping("/usuarios")
-    public Usuario criarUsuario(@Valid @RequestBody Usuario usuario) {
+    public Usuario criarUsuario(@Valid @RequestBody Usuario usuario) throws Exception {
         return usuarioService.save(usuario);
     }
 
     @PutMapping("/usuarios")
-    public Usuario atualizarUsuario(@Valid @RequestBody Usuario usuario) {
+    public Usuario atualizarUsuario(@Valid @RequestBody Usuario usuario) throws Exception {
         return usuarioService.update(usuario);
     }
 
@@ -47,6 +47,5 @@ public class UsuarioController {
     public void apagarUsuario(@PathVariable("id") Long id) {
         usuarioService.delete(id);
     }
-
 
 }
