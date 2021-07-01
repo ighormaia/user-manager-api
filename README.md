@@ -8,7 +8,7 @@ Requisitos:
  - Maven 3.6.3 ou superior
  - Postgres 12.7 ou superior (caso escolha o perfil Prod)
 
-O projeto está configurado com dois Profiles, podendo ser trocado ao rodar a aplicação
+O projeto está configurado com dois Profiles, podendo ser trocado ao executar a aplicação
  - Dev | configurado com o banco H2 (por padrão é o perfil usado)
  - Prod | configurado para acessar um banco postgres
 
