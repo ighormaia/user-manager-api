@@ -8,9 +8,12 @@ Requisitos:
  - Maven 3.6.3 ou superior
  - Postgres 12.7 ou superior (caso escolha o perfil Prod)
 
+O projeto está configurado com dois Profiles, podendo ser trocado ao rodar a aplicação
+ - Dev | configurado com o banco H2 (por padrão é o perfil usado)
+ - Prod | configurado para acessar um banco postgres
 
-Comandos para executar:
 
+Comandos para rodar a aplicação:
 
 ### `mvn clean install`
 Para instalar todas dependencias
@@ -22,10 +25,11 @@ Para iniciar a aplicação com o banco H2 (em memória)
 Para iniciar a aplicação com o banco Postgres
 
 
-OBS:. Para executar a aplicação com o Postgres é necessário criar uma instância com as seguintes configurações ou alterar no arquivo "application-prod.yml":
+Configuração do Postgres: (pode ser alterado no arquivo "application-prod.yml")
  - database: usermanager
  - username: postgres
  - password: password
+ - port: 5432
 
 
 Após a execução a api estará disponível na url:
@@ -34,8 +38,7 @@ Após a execução a api estará disponível na url:
 
 As rotas seguem o padrão REST:
 
- - GET localhost:9000/api/v1/usuarios
- - GET localhost:9000/api/v1/usuarios/{id}
- - POST localhost:9000/api/v1/usuarios
- - PUT localhost:9000/api/v1/usuarios/{id}
- - DELETE localhost:9000/api/v1/usuarios/{id}
+ - GET ALL    localhost:9000/api/v1/usuarios
+ - POST       localhost:9000/api/v1/usuarios
+ - PUT        localhost:9000/api/v1/usuarios
+ - DELETE     localhost:9000/api/v1/usuarios/{id}
