@@ -1,4 +1,4 @@
-## User Manager API
+## Gerenciamento de Usuários API
 
  - Api desenvolvida com o framework Spring Boot na versão 2.3.2
  - Pode ser rodado com o banco dados Postgres ou H2 (em memória)
