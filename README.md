@@ -8,9 +8,11 @@ Requisitos:
  - Maven 3.6.3 ou superior
  - Postgres 12.7 ou superior (caso escolha o perfil Prod)
 
-O projeto está configurado com dois Profiles, podendo ser trocado ao executar a aplicação
- - Dev | configurado com o banco H2 (por padrão é o perfil usado)
- - Prod | configurado para acessar um banco postgres
+O projeto está configurado com dois Profiles, podendo ser alterado nas configurações
+ - Dev | configurado com o banco H2
+ - Prod | configurado para acessar um banco Postgres (por padrão é o perfil configurado)
+
+Para alterar basta trocar o nome "prod" por "dev" e vice versa no arquivo "application.yml"
 
 
 Comandos para executar a aplicação:
@@ -19,10 +21,7 @@ Comandos para executar a aplicação:
 Para instalar todas dependencias
 
 ### `mvn spring-boot:run`
-Para iniciar a aplicação com o banco H2 (em memória)
-
-### `mvn spring-boot:run -Dspring-boot.run.profiles=application-prod`
-Para iniciar a aplicação com o banco Postgres
+Para iniciar a aplicação
 
 
 Configuração do Postgres: (pode ser alterado no arquivo "application-prod.yml")
