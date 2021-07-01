@@ -13,7 +13,7 @@ O projeto está configurado com dois Profiles, podendo ser trocado ao executar a
  - Prod | configurado para acessar um banco postgres
 
 
-Comandos para rodar a aplicação:
+Comandos para executar a aplicação:
 
 ### `mvn clean install`
 Para instalar todas dependencias
