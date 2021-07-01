@@ -5,7 +5,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/usermanager
-    username: ighormaia
+    username: postgres
     password: password
     initialization-mode: always
 
