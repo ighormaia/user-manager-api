@@ -30,6 +30,9 @@ Configuração do Postgres: (pode ser alterado no arquivo "application-prod.yml"
  - password: password
  - port: 5432
 
+OBS:. é necessário somente o database estar criado, pois durante a primeira execução 
+a própria aplicação irá criar a estrutura das tabelas
+
 
 Após a execução a api estará disponível na url:
  - http://localhost:9000
