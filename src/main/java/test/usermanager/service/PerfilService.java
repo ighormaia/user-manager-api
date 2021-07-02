@@ -34,7 +34,7 @@ public class PerfilService {
     public Perfil update(Perfil perfil) throws Exception {
         Optional<Perfil> perfilJaExiste = perfilRepository.findByNome(perfil.getNome());
 
-        if (perfilJaExiste.isPresent()) {
+        if (perfilJaExiste.isPresent() && perfilJaExiste.get().getIdPerfil() != perfil.getIdPerfil()) {
             throw new Exception("Este perfil já está cadastrado");
         }
 

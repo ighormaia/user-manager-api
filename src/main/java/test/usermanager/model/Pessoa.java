@@ -1,6 +1,6 @@
 package test.usermanager.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -23,7 +23,7 @@ public abstract class Pessoa {
     private Date dataNascimento;
 
     @Column
-    private char sexo;
+    private String sexo;
 
 
     public String getNome() {
@@ -50,11 +50,11 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -73,7 +73,7 @@ public abstract class Pessoa {
         return this;
     }
 
-    public Pessoa sexo(char sexo) {
+    public Pessoa sexo(String sexo) {
         setSexo(sexo);
         return this;
     }

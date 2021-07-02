@@ -34,7 +34,7 @@ public class CargoService {
     public Cargo update(Cargo cargo) throws Exception {
         Optional<Cargo> cargoJaExiste = cargoRepository.findByNome(cargo.getNome());
 
-        if (cargoJaExiste.isPresent()) {
+        if (cargoJaExiste.isPresent() && cargoJaExiste.get().getIdCargo() != cargo.getIdCargo()) {
             throw new Exception("Este cargo já está cadastrado");
         }
 

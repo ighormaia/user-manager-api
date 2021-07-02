@@ -1,5 +1,6 @@
 package test.usermanager.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,15 +29,19 @@ public class UsuarioService {
             throw new Exception("Este cpf já está cadastrado");
         }
 
+        usuario.setDataCadastro(new Date());
+
         return usuarioRepository.save(usuario);
     }
 
     public Usuario update(Usuario usuario) throws Exception {
         Optional<Usuario> usuarioJaExiste = usuarioRepository.findByCpf(usuario.getCpf());
 
-        if (usuarioJaExiste.isPresent()) {
+        if (usuarioJaExiste.isPresent() && usuarioJaExiste.get().getIdUsuario() != usuario.getIdUsuario()) {
             throw new Exception("Este cpf já está cadastrado");
         }
+
+        usuario.setDataCadastro(new Date());
 
         return usuarioRepository.save(usuario);
     }
