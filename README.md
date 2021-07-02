@@ -40,7 +40,7 @@ Após a execução a api estará disponível na url:
 
 As rotas seguem o padrão REST:
 
- - GET ALL    localhost:9000/api/v1/usuarios
+ - GET        localhost:9000/api/v1/usuarios
  - POST       localhost:9000/api/v1/usuarios
  - PUT        localhost:9000/api/v1/usuarios
  - DELETE     localhost:9000/api/v1/usuarios/{id}
